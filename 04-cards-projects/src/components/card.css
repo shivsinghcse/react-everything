@@ -1,0 +1,104 @@
+.card {
+    width: 300px;
+    /* height: 320px; */
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .company-logo {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #555050;
+    padding: 0.2rem;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.header {
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 1.5rem;
+}
+
+.save-btn {
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: #efeaea;
+    padding: 0.2rem 0.5rem;
+    color: gray;
+    cursor: pointer;
+}
+
+
+
+.company {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555050;
+}
+
+.company span {
+    font-size: 0.8rem;
+    color: gray;
+    margin-left: 1rem;
+    font-weight: 400;
+}
+
+.job-title {
+    color: #262525;
+    font-size: 1.4rem;
+    margin: 0.4rem 0;
+    min-height: 2.4rem;
+    /* ✅ keeps the height consistent across cards */
+    line-height: 1.2;
+}
+
+.main{
+    min-height: 4.4rem;
+}
+.tags {
+    padding: 3px 10px;
+    margin-right: 0.6rem;
+    background-color: #d7d1d1;
+    border: none;
+    border-radius: 3px;
+}
+
+.footer {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.apply-btn {
+    padding: 0.5rem 0.9rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #1f1e1e;
+    color: #fff;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.apply-btn:hover {
+    background-color: #000;
+    cursor: pointer;
+}
+
+.salary {
+    font-weight: 700;
+    color: #3b3a3a;
+    font-size: 1.3rem;
+}
+
+.location {
+    color: gray;
+    font-size: 1rem;
+}
