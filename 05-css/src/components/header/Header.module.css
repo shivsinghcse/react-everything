@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: #dfabab;
+    margin-bottom: 1.5rem;
+}
+
+.header h1{
+    color: #aa0606;
+}
+
+.btn{
+    width: fit-content;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #aa0606;
+    cursor: pointer;
+}

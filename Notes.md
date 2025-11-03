@@ -219,15 +219,167 @@ const Child = (props) => {
 export default Parent;
 
 ```
+## Lucide React
+- Library for icons
+
+
+
+## 🎨 CSS in React
+### 🟩 1. Inline CSS
+- Write CSS directly inside the `style` attribute as a JS object.
+- Property names are in **camelCase** (e.g., `backgroundColor`, not `background-color`).
+```jsx
+
+const Button = () => {
+
+  return (
+        <button style={{
+			color: "red",
+			backgroundColor: "black"
+		}}>
+			See more...
+		</button>
+  )
+}
+
+export default Button
+```
+### 🟩 2. Internal CSS (via JS object)
+- Store the style object in a variable and use it inside the `style` prop.
+
+```jsx
+
+const Button = () => {
+  const btnStyle = {
+			color: "red",
+			backgroundColor: "black"
+		};
+
+  return (
+    <>
+        <button style={btnStyle}>See more...</button>
+    </>
+  )
+}
+
+export default Button
+
+//✅ **Best for**: small components or dynamic inline styles (e.g., conditional color).
+```
+
+### 🟩 3. Global CSS (index.css)
+- This file applies styles globally across your React app.
+- It’s imported once in `main.jsx` or `index.js`.
+- ✅ **Tip**: Use for global resets, fonts, or layout rules.
+
+### 🟩 4. Component-level CSS
+- You can make a `.css` file for each component.
+- Example:
+```css
+src/
+ └── styles/
+      ├── Button.css
+      └── Header.css
+
+```
+```jsx
+import "./Button.css";
+
+const Button = () => <button className="btn">See more...</button>;
+
+```
+- ⚠️ **Problem**: If two components have the same class name (.btn), styles might conflict.
+
+
+- `width: fit-content;`
 
 
 
 
+### 🟩 5. CSS Modules
+- CSS Modules prevent style conflicts by generating unique class names automatically.
 
+- **Setup**:
+	- Each component gets its own folder:
+
+```css
+src/components/Header/
+ ├── Header.jsx
+ └── Header.module.css
+```
+- **Usage:**
+
+
+```jsx
+// Header.jsx
+import style from "./Header.module.css"
+
+const Header = () => {
+  return (
+    <>
+        <div className={style.header}>
+            <h1>Header</h1>
+            <button className={style.btn}>Login</button>
+        </div>
+    </>
+  )
+}
+
+export default Header
+```
+
+```css
+/* Header.module.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: #dfabab;
+    margin-bottom: 1.5rem;
+}
+
+.header h1{
+    color: #aa0606;
+}
+
+.btn{
+    width: fit-content;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #aa0606;
+    cursor: pointer;
+}
+```
+- ✅ **Benefits**:
+	- No name conflicts.
+	- Scoped styling.
+	- Works with media queries and pseudo-selectors (`:hover`, `:focus`, etc.).
+
+### ⚡ Bonus Tips:
+- `width: fit-content;` → makes an element only as wide as its content.
+- Use **classnames** library if you need to combine multiple module classes:
+```bash
+npm install classnames
+```
+```jsx
+import clsx from "classnames";
+<button className={clsx(style.btn, style.active)}>Click</button>
+
+```
+- For larger projects, consider CSS-in-JS libraries like **styled-components** or **emotion**.
+
+
+## TailwindCSS in React
 
 
 ## Interview question
-
+- key props in map
 - 100% vs 100vh height and width
 - min-height and max-height and wight
 - strict mode in react
