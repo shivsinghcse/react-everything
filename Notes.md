@@ -381,6 +381,8 @@ import clsx from "classnames";
 - Install TailwindCSS in your project for that visit https://tailwindcss.com/docs/installation/using-vite
 - Install VSCode extension "Tailwind CSS IntelliSense with Hex Colors
 
+## Feature-based vs Atomic Design folder structures
+
 ## Interview question
 - key props in map
 - 100% vs 100vh height and width
