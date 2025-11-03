@@ -377,6 +377,9 @@ import clsx from "classnames";
 
 ## TailwindCSS in React
 
+- Tailwind is a utility first library.
+- Install TailwindCSS in your project for that visit https://tailwindcss.com/docs/installation/using-vite
+- Install VSCode extension "Tailwind CSS IntelliSense with Hex Colors
 
 ## Interview question
 - key props in map
